@@ -1,0 +1,24 @@
+Keyboard Events in JavaScript
+
+1. keydown
+   - Fires when a key is pressed down.
+   - Fires for all keys (letters, numbers, arrows, Shift, etc.).
+   - Triggers repeatedly while holding the key.
+   - Common use: Detect key shortcuts or actions while typing.
+
+2. keypress (Deprecated)
+   - Fires when a printable key is pressed.
+   - Doesn’t detect special keys (e.g., Shift, Ctrl, Arrow).
+   - Replaced by keydown and keyup in modern browsers.
+
+3. keyup
+   - Fires when a key is released.
+   - Good for reading final input values or triggering actions after typing.
+
+Event Order:
+keydown → keypress → keyup
+
+Common Uses:
+- keydown: Detect or handle key actions.
+- keyup: Validate or update UI after typing.
+- keypress: Avoid (deprecated).

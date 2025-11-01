@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        font-size: 40px;
+    }
+    img{
+        width: 100px;
+    }
+</style>
+<body>
+    <div id="Hello">
+        How are you?
+    </div>
+    <input type="button" value="Answer"  onclick="ques1()">
+    <input type="button" value="change Question" onclick="answer()">
+    <input type="button" value="change color" onclick="changeCol()">
+    <input type="button" value="back color" onclick="changeBac()">
+    <img src="image.png" alt="" onclick="setNewImage()" id="my1">
+
+</body>
+
+<script>
+    function setNewImage(){
+        document.getElementById("my1").setAttribute("src","image copy.png");
+    }
+    function changeBac(){
+        document.getElementById("Hello").style.color = "black";
+    }
+    function changeCol(){
+        document.getElementById("Hello").style.color = "red";
+    }
+    function ques1(){
+        document.getElementById('Hello').innerHTML = "I fine thank you.";
+    }
+    function answer(){
+        document.getElementById("Hello").innerHTML= " Do you love me? ";
+    }
+</script>
+
+</html>

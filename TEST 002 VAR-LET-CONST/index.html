@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        font-size: 40px;
+        font-family: serif;
+    }
+</style>
+<body>
+    <div id="demo">
+        JavaScript Demo
+    </div>
+    <input type="button" value="click!" onclick="test()">
+    <input type="button" value="click2" onclick="test1()">
+</body>
+<script>
+    var i = "2023";
+    function test(){
+        var demo= "JavaScript";
+        var x='10';
+        var y='20.110';
+        i = "2020";
+        var total = parseFloat(x) + parseFloat (y);
+        document.getElementById("demo").innerHTML = total;
+        console.log(i);
+    }
+
+    function test1(){
+        console.log(i);
+    }
+</script>
+</html>

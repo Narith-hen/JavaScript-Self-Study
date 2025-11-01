@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">Number1</label>
+    <input type="text" name="" id="txt-num1">
+    <label for="">Number2</label>
+    <input type="text" name="" id="txt-num2">
+    <label for="">Total</label>
+    <input type="text" name="" id="txt-total">
+    <input type="button" value="+" onclick="sum()">
+    <input type="button" value="-" onclick="sum1()">
+    <input type="button" value="*" onclick="sum2()">
+    <input type="button" value="/" onclick="sum3()">
+
+</body>
+
+<script>
+    var num1= document.getElementById("txt-num1");
+    var num2= document.getElementById("txt-num2");
+    function sum(){
+        var total = parseFloat(num1.value) + parseFloat(num2.value);
+        document.getElementById("txt-total").value = total;
+    }
+    function sum1(){
+        var total = parseFloat(num1.value) - parseFloat(num2.value);
+        document.getElementById("txt-total").value = total;
+    }
+    function sum2(){
+        var total = parseFloat(num1.value) * parseFloat(num2.value);
+        document.getElementById("txt-total").value = total;
+    }
+    function sum3(){
+        var total = parseFloat(num1.value) / parseFloat(num2.value);
+        document.getElementById("txt-total").value = total;
+    }
+
+</script>
+
+</html>

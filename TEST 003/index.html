@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        padding: 20px;
+    }
+    #demo{
+        font-size: 30px;
+        color: blue;
+    }
+</style>
+<body>
+    <div id="demo">
+        Demo
+    </div>
+    <input type="button" value="click0" id='but-click'>
+    <input type="button" value="click1" id="btn1">
+    <input type="button" value="click2" id="btn2">
+    <input type="button" value="click3" id="btn3">
+</body>
+
+<script>
+    // D
+    document.querySelector("#btn3").onclick = function(){
+        console.log("Hello3")
+    }
+    // C
+    document.getElementById("btn2").onclick = function(){
+        console.log("Hello world!");
+    }
+    // B
+    document.querySelector("#btn1").addEventListener("click", function(){
+        console.log("Hello");
+    });
+    // A
+    document.getElementById("but-click").addEventListener("click" , function() {
+        test1();
+        document.getElementById("demo").innerHTML = "Hello javaScript!";
+    });
+
+    function test1(){
+        console.log("Click Me!")
+        document.getElementById("demo").innerHTML = "JavaScript it easy."
+    };
+
+</script>
+
+</html>

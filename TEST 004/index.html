@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        display: flex;
+    }
+    .box{
+        padding: 20px;
+        margin: 10px;
+        color: green;
+        background-color: rgb(182, 151, 15);
+    }
+    input{
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <label for="">Qty</label>
+    <input type="number" name="" id="txt-qty">
+    <label for="">Price</label>
+    <input type="number" name="" id="txt-price">
+    <label for="">Total</label>
+    <input type="number" name="" id="txt-total" readonly> 
+    <!-- readonly; it is a input but we cannot input in it. -->
+
+
+    <div class="body">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+
+<script>
+    var qty = document.getElementById("txt-qty");
+    var price = document.getElementById("txt-price");
+    var total = document.getElementById("txt-total");
+    // keyup 
+    // keypress
+    // keydown
+    
+    qty.addEventListener("keyup" , function(){
+        // total.value = qty.value * price.value;
+        // getTotal();  //A
+        // getTotal2 (qty.value , price.value); //B
+        // console.log(getTotal3( qty.value , price.value )); //C
+        // total.value = getTotal3(qty.value , price.value);  //C
+    });
+    price.addEventListener("keyup" , function(){
+        // total.value = qty.value * price.value;
+        // getTotal();  //A
+        // getTotal2 (qty.value , price.value);   //B
+        // console.log(getTotal3( qty.value , price.value ));  //C
+        // total.value = getTotal3(qty.value , price.value);   //c
+    });
+    // C
+    function getTotal3( q , p){
+        return q * p;
+    };
+    //B
+    function getTotal2 ( q , p){
+        total.value = q * p;
+    };
+    // A
+    function getTotal (){
+        total.value = qty.value * price.value;
+    };
+
+
+
+
+    document.querySelectorAll('.box')[0].addEventListener("click", function(){
+        console.log("Hello world box 1");
+    });
+    document.querySelectorAll('.box')[1].addEventListener("click", function(){
+        console.log("Hello world box 2");
+    });
+    document.querySelectorAll('.box')[2].addEventListener("click", function(){
+        console.log("Hello world box 3");
+    });
+    // document.querySelector(".box").addEventListener("click" , function(){
+    //     console.log("box1");
+    // })
+
+    // document.querySelector
+    // document.querySelectorAll
+</script>
+
+</html>
