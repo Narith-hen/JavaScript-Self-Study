@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #demo{
+        font-size: 30px;
+        width: 320px;
+        height: 200px;
+        background-color: green;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        padding: 20px;
+
+    }
+</style>
+<body>
+    <label for="">Total</label>
+    <input type="text" name="" id="txt-total">
+    <label for="">Result</label>
+    <input type="text" name="" id="txt-result">
+
+
+    <input type="button" value="Hide/Show" id="btn2">
+    <div id="demo">
+
+    </div>
+    <input type="button" value="Click Me" id="btn1">
+</body>
+<script>
+    const demo = document.getElementById("demo");
+    var opt = 0;
+    const txtTotal = document.getElementById("txt-total");
+    const txtResult = document.getElementById("txt-result");
+
+    //Total Result
+    txtTotal.addEventListener("keyup", function(){
+        console.log("hello");
+        if (txtTotal.value >= 50){
+            txtResult.value = "Pass";
+        }else{
+            txtResult.value = "Fail";
+        }
+    });
+
+    //Hide show element
+    document.getElementById("btn2").addEventListener("click" , function(){
+        // console.log("Hello");
+        if ( opt == 0){
+            demo.innerHTML = "Hello world";
+            demo.style.display =  "none";
+            opt = 1;
+        }else{
+            demo.style.display = "flex";
+            opt = 0;
+        }
+    });
+    document.getElementById("btn1").addEventListener("click" , function(){
+        // console.log("Hello world!");
+        var total = "A";
+        var totals ="B";
+        if ( total != "A"){
+            demo.innerHTML = "Apple";
+        }else if( totals == "B"){
+            demo.innerHTML = "Book";
+        }
+        
+        // document.getElementById("demo").innerHTML = total;
+    });
+</script>
+</html>
