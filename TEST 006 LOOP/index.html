@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    #demo{
+        font-size: 32px;
+        background-color: green;
+        color: white;
+        font-family: serif;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        
+    }
+    input{
+        padding: 8px 16px;
+
+    }
+    .box{
+        background-color: orange;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div id="demo">
+    </div>
+    <input type="button" value="Click Me" id="btn1">
+</body>
+<script>
+    document.getElementById("btn1").addEventListener("click", function(){
+        // document.getElementById("demo").innerHTML = "JavaScript";
+        var txt = "";
+
+        for( i = 0 ; i < 5 ; i++){
+            console.log(i);
+            // txt += i;
+            txt +=` <div class ='box'>${i}</div>`;
+        }
+        document.getElementById("demo").innerHTML = txt;
+    });
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="demo"> </div>
+    <input type="button" value="click me" id="btn1">
+</body>
+<script>
+    document.getElementById("btn1").addEventListener("click", function(){
+        // console.log("Hello");
+        var arraryList = [ "Home", "About","Contact Us", "Login" ];
+        var num = arraryList.length;
+        var txt = "";
+        for (i = 0 ; i < num ; i++){
+            txt += `
+                <li>
+                    <a>
+                    ${arraryList[i]}
+                    </a>
+                </li>
+            `;
+            // console.log(arraryList[i]);
+            // document.getElementById("demo").innerHTML = arraryList[0];
+        }
+        
+        document.getElementById("demo").innerHTML = `<ul>${txt}</ul>`;
+        console.log(txt);
+    });
+    
+</script>
+</html>
