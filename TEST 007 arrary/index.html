@@ -8,9 +8,70 @@
 </head>
 <body>
     <div id="demo"> </div>
+    <div class="img-list">
+        <!-- <div class="box">
+            <img src="img/redBoy.png" alt="">
+            <h1>Redboy</h1>
+        </div>
+        <div class="box">
+            <img src="img/blackBoy.png" alt="">
+            <h1>Blackboy</h1>
+        </div>
+        <div class="box">
+            <img src="img/whiteBoy.png" alt="">
+            <h1>Whiteboy</h1>
+        </div>
+        <div class="box">
+            <img src="img/blueBoy.png" alt="">
+            <h1>Blueboy</h1>
+        </div>
+        <div class="box">
+            <img src="img/orangeBoy.png" alt="">
+            <h1>Orangeboy</h1>
+        </div>
+        <div class="box">
+            <img src="img/pinkBoy.png" alt="">
+            <h1>Pinkboy</h1>
+        </div>
+        <div class="box">
+            <img src="img/greenBoy.png" alt="">
+            <h1>GreenBoy</h1>
+        </div>
+        <div class="box">
+            <img src="img/lofi.png" alt="">
+            <h1>Lofi</h1>
+        </div> -->
+    </div>
+
+
     <input type="button" value="click me" id="btn1">
 </body>
 <script>
+    const imgList = [
+        {"title":"Redboy", "img":"img/redBoy.png"},
+        {"title":"Blackboy", "img":"img/blackBoy.png"},
+        {"title":"Whiteboy", "img":"img/whiteBoy.png"},
+        {"title":"Greenboy", "img":"img/greenBoy.png"},
+        {"title":"Orangeboy", "img":"img/orangeBoy.png"},
+        {"title":"Pinkboy", "img":"img/pinkBoy.png"},
+        {"title":"Blueboy", "img":"img/blueBoy.png"},
+        {"title":"Lofi", "img":"img/lofi.png"},
+]
+    getImgList();
+    function getImgList(){
+        var txt = "";
+        for(i in imgList){
+            txt += `
+                <div class="box">
+                    <img src="${imgList[i]["img"]}" alt="">
+                    <h1>${imgList[i]["title"]}</h1>
+                </div>
+            `;
+        }
+        document.querySelector(".img-list").innerHTML = txt;
+    };
+
+
     document.getElementById("btn1").addEventListener("click", function(){
         // console.log("Hello");
         var arraryList = [ "Home", "About","Contact Us", "Login" ];
