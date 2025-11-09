@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-6 col-xl-6 col-lg-6 item-box-1">
+        <div class="row" id="item-list">
+            <!-- <div class="col-xxl-6 col-xl-6 col-lg-6 item-box-1">
                 <div class="box">
                     <h1>Super Car in Cambodia</h1>
                     <div class="item">
@@ -42,107 +42,147 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6 item-box-1">
-                 <div class="box">
-                    <h1>Super Car in Cambodia</h1>
-                    <div class="item">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw1.png" alt="">
-                                    <span>US$99,999</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw2.png" alt="">
-                                    <span>US$89,999</span>
-                                </a>
-                            </li>
-                             <li>
-                                <a href="">
-                                    <img src="img/bmw3.png" alt="">
-                                    <span>US$109,999</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw4.png" alt="">
-                                    <span>US$199,999</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6 item-box-1">
-                <div class="box">
-                    <h1>Super Car in Cambodia</h1>
-                    <div class="item">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw1.png" alt="">
-                                    <span>US$99,999</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw2.png" alt="">
-                                    <span>US$89,999</span>
-                                </a>
-                            </li>
-                             <li>
-                                <a href="">
-                                    <img src="img/bmw3.png" alt="">
-                                    <span>US$109,999</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw4.png" alt="">
-                                    <span>US$199,999</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6 item-box-1">
-                 <div class="box">
-                    <h1>Super Car in Cambodia</h1>
-                    <div class="item">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw1.png" alt="">
-                                    <span>US$99,999</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw2.png" alt="">
-                                    <span>US$89,999</span>
-                                </a>
-                            </li>
-                             <li>
-                                <a href="">
-                                    <img src="img/bmw3.png" alt="">
-                                    <span>US$109,999</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="img/bmw4.png" alt="">
-                                    <span>US$199,999</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
+
+<script>
+    const itemList = [
+        { 
+            "title":"Super Car in Cambodia", 
+            "items":[
+                {
+                    "img":"img/bmw1.png",
+                    "price":"$199,999",
+                },
+                {
+                    "img":"img/bmw2.png",
+                    "price":"$99,999",
+                },
+                {
+                    "img":"img/bmw3.png",
+                    "price":"$309,999",
+                },
+                {
+                    "img":"img/bmw4.png",
+                    "price":"US$299,999",
+                },
+
+            ]
+        },
+        { 
+            "title":"Super motobike in Cambodia", 
+            "items":[
+                {
+                    "img":"img/mb1.png",
+                    "price":"$199,999",
+                },
+                {
+                    "img":"img/mb2.png",
+                    "price":"$99,999",
+                },
+                {
+                    "img":"img/mb3.png",
+                    "price":"$309,999",
+                },
+                {
+                    "img":"img/mb4.png",
+                    "price":"US$299,999",
+                },
+
+            ]
+        },
+        { 
+            "title":"Super bike in Cambodia", 
+            "items":[
+                {
+                    "img":"img/bike1.png",
+                    "price":"$199,999",
+                },
+                {
+                    "img":"img/bike2.png",
+                    "price":"$99,999",
+                },
+                {
+                    "img":"img/bike3.png",
+                    "price":"$309,999",
+                },
+                {
+                    "img":"img/bike4.png",
+                    "price":"US$299,999",
+                },
+
+            ]
+        },
+        { 
+            "title":"Super boat in Cambodia", 
+            "items":[
+                {
+                    "img":"img/boat1.png",
+                    "price":"$199,999",
+                },
+                {
+                    "img":"img/boat2.png",
+                    "price":"$99,999",
+                },
+                {
+                    "img":"img/boat3.png",
+                    "price":"$309,999",
+                },
+                {
+                    "img":"img/boat4.png",
+                    "price":"US$299,999",
+                },
+
+            ]
+        }
+    ];
+
+    const itemBox = document.getElementById("item-list");
+
+    getItemList();
+    
+    function getItemList (){
+        var txt = "";
+        for(i in itemList){
+            var subItem = itemList[i]['items'];
+            // var txt2 = "";
+            // for( j in subItem){
+            //     txt2 += `<li>
+            //                 <a href="">
+            //                     <img src="${subItem[j]["img"]}" alt="">
+            //                     <span>${subItem[j]['price']}</span>
+            //                 </a>
+            //             </li>
+            //             `;
+            // }
+            txt += `<div class="col-xxl-6 col-xl-6 col-lg-6 item-box-1">
+                <div class="box">
+                    <h1>${itemList[i]["title"]}</h1>
+                    <div class="item">
+                        <ul>
+                            ${getSubItem(subItem)}
+                        </ul>
+                    </div>
+                </div>
+            </div>`;
+            itemBox.innerHTML = txt;
+        };
+    };
+
+    function getSubItem (items){
+        var txt = "";
+        for (i in items){
+            txt += `<li>
+                        <a href="">
+                            <img src="${items[i]["img"]}" alt="">
+                            <span>${items[i]['price']}</span>
+                        </a>
+                    </li>`;
+        };
+        return txt;
+    };
+</script>
+
 </html>
